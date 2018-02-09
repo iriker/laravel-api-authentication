@@ -27,7 +27,7 @@
   "autoload": {
     "classmap": [],
     "psr-4": {
-      "Pivotal\\ApiAuthentication": "src/"
+      "Pivotal\\ApiAuthentication\\": "src/"
     }
   },
   "autoload-dev": {
