@@ -2,10 +2,29 @@
 
 namespace Pivotal\ApiAuthentication\Providers;
 
-class AuthenticationServiceProvider
+use Illuminate\Support\ServiceProvider;
+use Pivotal\ApiAuthentication\ApiAuthentication;
+
+class AuthenticationServiceProvider extends ServiceProvider
 {
-    public function routes()
+    /**
+     * Bootstrap the application services.
+     *
+     * @return void
+     */
+    public function boot()
     {
-        require __DIR__.'../Routes/api.php';
+        // Pages and Posts Routes
+        $this->loadRoutesFrom(__DIR__ . '../Routes/api.php');
+    }
+
+    /**
+     * Register the application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->alias(ApiAuthentication::class, 'VoyagerApiAuthentication');
     }
 }

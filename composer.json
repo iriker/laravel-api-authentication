@@ -30,11 +30,6 @@
       "Pivotal\\ApiAuthentication\\": "src/"
     }
   },
-  "autoload-dev": {
-    "psr-4": {
-      "Pivotal\\ApiAuthentication\\Test\\": "tests"
-    }
-  },
   "extra": {
     "laravel": {
       "providers": [
