@@ -8,7 +8,6 @@
   ],
   "license": "MIT",
   "type": "library",
-  "minimum-stability": "stable",
   "authors": [
     {
       "name": "Pivotal Agency",
