@@ -1,9 +1,8 @@
 <?php
 
-namespace Pivotal\ApiAuthentication\Providers;
+namespace Pivotal\ApiAuthentication;
 
 use Illuminate\Support\ServiceProvider;
-use Pivotal\ApiAuthentication\ApiAuthentication;
 
 class AuthenticationServiceProvider extends ServiceProvider
 {
