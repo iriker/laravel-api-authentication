@@ -33,7 +33,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Tymon\\JWTAuth\\Providers\\JWTAuthServiceProvider",
+        "Tymon\\JWTAuth\\Providers\\LaravelServiceProvider",
         "Pivotal\\ApiAuthentication\\AuthenticationServiceProvider"
       ],
       "aliases": {
