@@ -3,6 +3,8 @@
 namespace Pivotal\ApiAuthentication\Http\Api;
 
 use JWTAuth;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Tymon\JWTAuth\Exceptions\JWTException;
 
 class AuthenticateController extends Controller
