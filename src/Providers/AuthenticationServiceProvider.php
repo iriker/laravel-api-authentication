@@ -14,7 +14,6 @@ class AuthenticationServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Pages and Posts Routes
         $this->loadRoutesFrom(__DIR__ . '../Routes/api.php');
     }
 
