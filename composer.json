@@ -44,9 +44,9 @@
   },
   "scripts": {
     "test": "phpunit",
-    "post-root-package-install": [
+    "post-install-cmd": [
       "@php artisan vendor:publish --provider='Tymon\\JWTAuth\\Providers\\JWTAuthServiceProvider'",
-      "@php artisan jwt:generate"
+      "@php artisan jwt:secret"
     ]
   }
 }
