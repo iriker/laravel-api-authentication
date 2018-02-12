@@ -7,7 +7,7 @@
     "frontend"
   ],
   "license": "MIT",
-  "type": "metapackage",
+  "type": "library",
   "minimum-stability": "stable",
   "authors": [
     {
