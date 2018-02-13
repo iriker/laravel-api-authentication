@@ -6,7 +6,6 @@
     "voyager",
     "frontend"
   ],
-  "minimum-stability": "dev",
   "license": "MIT",
   "type": "library",
   "authors": [
@@ -19,7 +18,7 @@
   "require": {
     "laravel/framework": "5.5.*",
     "tcg/voyager": "^1.0",
-    "tymon/jwt-auth": "^1.0.0-rc.2"
+    "tymon/jwt-auth": "^0.5.12"
   },
   "require-dev": {
     "phpunit/phpunit": "^5.7"
@@ -33,7 +32,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Tymon\\JWTAuth\\Providers\\LaravelServiceProvider",
+        "Tymon\\JWTAuth\\Providers\\JWTAuthServiceProvider",
         "Pivotal\\ApiAuthentication\\AuthenticationServiceProvider"
       ],
       "aliases": {
@@ -45,8 +44,7 @@
   "scripts": {
     "test": "phpunit",
     "post-install-cmd": [
-      "@php artisan vendor:publish --provider='Tymon\\JWTAuth\\Providers\\LaravelServiceProvider'",
-      "@php artisan jwt:secret"
+      "@php artisan vendor:publish --provider='Tymon\\JWTAuth\\Providers\\JWTAuthServiceProvider'"
     ]
   }
 }
