@@ -1,6 +1,6 @@
 <?php
 
-namespace Pivotal\ApiAuthentication\Http\Api;
+namespace Pivotal\ApiAuthentication\Http;
 
 use JWTAuth;
 use Illuminate\Http\Request;
