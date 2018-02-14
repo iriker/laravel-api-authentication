@@ -1,6 +1,6 @@
 <?php
 
-namespace Pivotal\Tests\Unit;
+namespace Pvtl\Tests\Unit;
 
 use Tests\TestCase;
 

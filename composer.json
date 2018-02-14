@@ -1,10 +1,10 @@
 {
-  "name": "pivotal/api-authentication",
-  "description": "Ahoy! - A package to implement JWT into Voyager",
+  "name": "pvtl/laravel-api-authentication",
+  "description": "Ahoy! - A package to implement JWT into Laravel",
   "keywords": [
     "laravel",
-    "voyager",
-    "frontend"
+    "frontend",
+    "jwt"
   ],
   "license": "MIT",
   "type": "library",
@@ -17,7 +17,6 @@
   ],
   "require": {
     "laravel/framework": "5.5.*",
-    "tcg/voyager": "^1.0",
     "tymon/jwt-auth": "^0.5.12"
   },
   "require-dev": {
@@ -26,20 +25,20 @@
   "autoload": {
     "classmap": [],
     "psr-4": {
-      "Pivotal\\ApiAuthentication\\": "src/"
+      "Pvtl\\ApiAuthentication\\": "src/"
     }
   },
   "autoload-dev": {
     "classmap": [],
     "psr-4": {
-      "Pivotal\\ApiAuthentication\\Tests\\": "tests/"
+      "Pvtl\\ApiAuthentication\\Tests\\": "tests/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
         "Tymon\\JWTAuth\\Providers\\JWTAuthServiceProvider",
-        "Pivotal\\ApiAuthentication\\AuthenticationServiceProvider"
+        "Pvtl\\ApiAuthentication\\AuthenticationServiceProvider"
       ],
       "aliases": {
         "JWTAuth": "Tymon\\JWTAuth\\Facades\\JWTAuth",

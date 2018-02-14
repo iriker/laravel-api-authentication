@@ -1,9 +1,9 @@
 <?php
 
-namespace Pivotal\ApiAuthentication\Http\Controllers;
+namespace Pvtl\ApiAuthentication\Http\Controllers;
 
-use App\User;
 use JWTAuth;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Validator;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pivotal\ApiAuthentication;
+namespace Pvtl\ApiAuthentication;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;

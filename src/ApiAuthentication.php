@@ -1,11 +1,11 @@
 <?php
 
-namespace Pivotal\ApiAuthentication;
+namespace Pvtl\ApiAuthentication;
 
 class ApiAuthentication
 {
     public function routes()
     {
-        require __DIR__.'/Routes/api.php';
+        require __DIR__.'/routes/api.php';
     }
 }
