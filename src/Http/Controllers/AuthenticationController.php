@@ -6,6 +6,7 @@ use JWTAuth;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Tymon\JWTAuth\Exceptions\JWTException;
 
@@ -83,6 +84,7 @@ class AuthenticateController extends Controller
             return response()->json($this->response->errors, $this->response->status);
         }
 
+        $input['password'] = Hash::make($request->password);
         User::create($input);
 
         $this->response->status = 201;
