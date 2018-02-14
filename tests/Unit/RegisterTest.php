@@ -25,7 +25,7 @@ class Register extends TestCase
             'password' => $this->password,
         ]);
 
-        $response->assertStatus(203);
+        $response->assertStatus(201);
     }
 
     public function testExistingEmailRegistration()

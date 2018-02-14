@@ -85,7 +85,7 @@ class AuthenticateController extends Controller
 
         User::create($input);
 
-        $this->response->status = 203;
+        $this->response->status = 201;
         return response(null)->setStatusCode($this->response->status);
     }
 }
