@@ -2,6 +2,7 @@
 
 namespace Pivotal\ApiAuthentication\Http\Controllers;
 
+use App\User;
 use JWTAuth;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -52,5 +53,39 @@ class AuthenticateController extends Controller
         $this->response->data['data'][] = compact('token');
 
         return response()->json($this->response->data, $this->response->status);
+    }
+
+    public function register(Request $request)
+    {
+        $input = $request->all();
+
+        $dataValidator = Validator::make($input, [
+            'name' => 'bail|required',
+            'email' => 'bail|required',
+            'password' => 'required',
+        ]);
+
+        $emailValidator = Validator::make($input, [
+            'email' => 'required|unique:users',
+        ]);
+
+        if ($emailValidator->fails()) {
+            $this->response->status = 409;
+            $this->response->errors['errors'][] = ['message' => 'A user with this email already exists'];
+
+            return response()->json($this->response->errors, $this->response->status);
+        }
+
+        if ($dataValidator->fails()) {
+            $this->response->status = 403;
+            $this->response->errors['errors'][] = ['message' => 'You must supply the appropriate data'];
+
+            return response()->json($this->response->errors, $this->response->status);
+        }
+
+        User::create($input);
+
+        $this->response->status = 203;
+        return response(null)->setStatusCode($this->response->status);
     }
 }
