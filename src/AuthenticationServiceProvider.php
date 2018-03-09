@@ -17,7 +17,7 @@ class AuthenticationServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
-        $this->loadRoutesFrom(__DIR__.'/Routes/api.php');
+        $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
 
         $router->aliasMiddleware('jwt.auth', \Tymon\JWTAuth\Middleware\GetUserFromToken::class);
         $router->aliasMiddleware('jwt.refresh', \Tymon\JWTAuth\Middleware\RefreshToken::class);
@@ -30,6 +30,6 @@ class AuthenticationServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->alias(ApiAuthentication::class, 'VoyagerApiAuthentication');
+        $this->app->alias(ApiAuthentication::class, 'JWTApiAuthentication');
     }
 }
