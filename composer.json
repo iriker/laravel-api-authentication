@@ -48,8 +48,8 @@
   },
   "scripts": {
     "test": "phpunit",
-    "post-package-install": [
-      "php artisan vendor:publish --provider='Tymon\\JWTAuth\\Providers\\JWTAuthServiceProvider'"
+    "post-autoload-dump": [
+      "php artisan vendor:publish --provider=Tymon\\JWTAuth\\Providers\\JWTAuthServiceProvider"
     ]
   }
 }
