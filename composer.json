@@ -38,7 +38,7 @@
     "laravel": {
       "providers": [
         "Tymon\\JWTAuth\\Providers\\JWTAuthServiceProvider",
-        "Pvtl\\ApiAuthentication\\AuthenticationServiceProvider"
+        "Pvtl\\ApiAuthentication\\Providers\\AuthenticationServiceProvider"
       ],
       "aliases": {
         "JWTAuth": "Tymon\\JWTAuth\\Facades\\JWTAuth",
